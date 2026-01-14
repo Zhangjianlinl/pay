@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #3b7dd6 0%, #2563b8 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    padding: 40px 30px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 头部 */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f0f0f0;
+}
+
+.company-name {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+}
+
+/* 收款码区域 */
+.qrcode-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.qrcode-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.qrcode {
+    width: 250px;
+    height: 250px;
+    display: block;
+    border-radius: 10px;
+}
+
+.tip {
+    color: #999;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 支付方式 */
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.method-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 13px;
+}
+
+.method-item .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.method-item .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 云闪付图标放大 */
+.method-item .icon img[alt="云闪付"] {
+    width: 120%;
+    height: 120%;
+}
+
+/* 底部 */
+.footer {
+    text-align: center;
+    color: #999;
+    font-size: 18px;
+}
+
+.contact {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.copyright {
+    color: #aaa;
+}
+
+/* 响应式 */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .qrcode {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .company-name {
+        font-size: 24px;
+    }
+    
+    .payment-methods {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
